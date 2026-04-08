@@ -7,32 +7,35 @@ public class TimerVillager : MonoBehaviour
 {
     public Image timer;
     private float currentTime = 1f;
-    private bool runTimer;
-    
+    private bool timerRunning = false;
+    // Start is called before the first frame update
     void Start()
     {
-        timer = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
-    public void _TimerVillagerPause()
-    {
-        if (runTimer)
-        {
-            currentTime -= Time.deltaTime;
-        }
-
-        if (!runTimer)
-        {
-            currentTime = currentTime;
-        }
-        runTimer = !runTimer;
+    public void Timer()
+    { 
+        timerRunning = true;
     }
-
     void Update()
     {
-        currentTime -= Time.deltaTime;
-        Debug.Log(currentTime);
-        timer.fillAmount = currentTime;
+        if (timerRunning)
+        {
+            currentTime -= Time.deltaTime;
+
+            if (currentTime >= 0f)
+            {
+                timer.fillAmount = currentTime;
+            }
+
+            if (currentTime <= 0f)
+            {
+                currentTime = 1f;
+                timer.fillAmount = currentTime;
+                timerRunning = false;
+            }
+        }
     }
 }
