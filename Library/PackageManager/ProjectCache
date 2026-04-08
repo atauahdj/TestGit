@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639112441962490413
-    m_Hash: 828957451
+      ticks: 639078620074958241
+    m_Hash: 1392897415
   m_LockFileStatus:
     m_FilePath: D:/BushRazrab/TestGit/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639112442346092167
-    m_Hash: 619816490
+      ticks: 639078620337707197
+    m_Hash: 2085604440
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,12 +22,12 @@ m_LocalPackages:
 m_ProjectPath: D:/BushRazrab/TestGit/Packages
 m_EditorVersion: 2022.2.23f1 (16a49e77427a)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@2.12.4
+- packageId: com.unity.collab-proxy@2.11.4
   testable: 0
   isDirectDependency: 1
-  version: 2.12.4
+  version: 2.11.4
   source: 1
-  resolvedPath: D:\BushRazrab\TestGit\Library\PackageCache\com.unity.collab-proxy@2.12.4
+  resolvedPath: D:\BushRazrab\TestGit\Library\PackageCache\com.unity.collab-proxy@2.11.4
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -191,13 +191,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 639093537468220000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.12/manual/index.html
+  datePublishedTicks: 639076172810380000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.11/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 4d24fbc0581e7fec760c9c8eef7517e1e1195f9e
+    revision: 164a710206077e1184a134f18801dae560fdf28a
     path: 
   unityLifecycle:
     version: 2.0.4
