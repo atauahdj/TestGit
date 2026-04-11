@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Module7/Save the vilage(practice 7)/Save the village Game.unity
+    guid: 35faad8967128ba44864a5921ba56f13
   m_configObjects: {}
