@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GiveWheat: {fileID: 1348899005}
   Score_wheat: {fileID: 34464853}
-  score2: 0
+  score2: 2
   interval: 3
   timerVillager: {fileID: 761172036}
 --- !u!82 &1348899005
