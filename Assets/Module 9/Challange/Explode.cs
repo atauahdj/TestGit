@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
-    public KeyCode KeyInput;
     private bool isGrounded = false;
+    private bool sts =true;
     public float X;
     public float Z;
-    private void Start()
-    {
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
-    }
+    public float Y;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyInput))
-        {
-            gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        }
-        Debug.Log(isGrounded);
+        Debug.Log("boll isGrounded: " + isGrounded);
+        Debug.Log("boll sts: " + sts);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,17 +21,24 @@ public class Explode : MonoBehaviour
             isGrounded = true;
         }
     }
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Target"))
         {
-            X = Random.Range(-10f, 10f);
-            Z = X;
-            if (isGrounded)
+            if(isGrounded && sts == true)
             {
-                other.gameObject.GetComponent<Rigidbody>().AddForce(X, 30f, Z, ForceMode.Impulse);
-                isGrounded = false;
+                X = Random.Range(-10f, 10f);
+                Z = X;   
+                Y = 10f;
             }
+            other.gameObject.GetComponent<Rigidbody>().AddForce(X, Y, Z, ForceMode.Impulse);
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Target"))
+        {
+            sts = false;
         }
     }
 }
