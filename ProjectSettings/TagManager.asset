@@ -9,6 +9,7 @@ TagManager:
   - BadGuy
   - GoodBoy
   - Ball
+  - BombTarget
   layers:
   - Default
   - TransparentFX

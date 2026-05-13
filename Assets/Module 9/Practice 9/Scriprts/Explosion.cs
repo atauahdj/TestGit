@@ -11,28 +11,26 @@ public class Explosion : MonoBehaviour
     private bool Boom = false;
     void OnTriggerStay(Collider other)
     {
-        if(timeExplosion > 0f)
+        if(Boom)
         {
-            if(other.gameObject == GetComponent<Rigidbody>())
-            {
-                 other.gameObject.GetComponent<Rigidbody>().AddForce(0,1f,0, ForceMode.Impulse);
-            }
+            other.gameObject.GetComponent<Rigidbody>().AddForce(0,StrongExplosion,0, ForceMode.Impulse);
         }
     }
     void Update()
     {
-        if (Boom)
+        if (!Boom)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 timeExplosion = maxTime;
-                Boom = false;
+                Boom = true;
+                Debug.Log("Boom!");
             }
         }
-        if(timeExplosion <= 0f)
+        if (Boom)
         {
-            Boom = true;
+            timeExplosion -= Time.deltaTime;
         }
-        timeExplosion -= Time.deltaTime;
+        if(timeExplosion <=0f)Boom = false;
     }
 }

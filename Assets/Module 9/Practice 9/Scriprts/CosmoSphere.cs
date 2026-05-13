@@ -6,10 +6,21 @@ public class CosmoSphere : MonoBehaviour
 {
     void OnTriggerStay(Collider cosmoZone)
     {
-        cosmoZone.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        if(cosmoZone.gameObject != null)
+        {
+            cosmoZone.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }
+        else
+        {
+            Debug.Log("Зона пустая");
+        }
     }
     void OnTriggerExit(Collider cosmoZone)
     {
-        cosmoZone.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        if(cosmoZone.gameObject != null)
+        {
+           cosmoZone.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
+
 }
